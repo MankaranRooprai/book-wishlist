@@ -95,8 +95,17 @@ spring.jpa.show-sql=true
 
 # Screenshots
 
-(Add screenshots of your app’s UI for better understanding)
+Main Page displaying all the books on the list
+![image](https://github.com/user-attachments/assets/40df1825-b1e5-414f-8658-8ada91fd0dd7)
 
+Updating book details
+![image](https://github.com/user-attachments/assets/96b1133a-1384-4602-8b48-b87ea522c6b0)
+
+Adding a new book
+![image](https://github.com/user-attachments/assets/f3e4e0cd-c62d-43d3-8db8-4864372614d6)
+
+Database storing book info
+![image](https://github.com/user-attachments/assets/67ed1bc4-4493-440d-a6fe-4b039885f276)
 
 1. **Clone the Repository:**
 
