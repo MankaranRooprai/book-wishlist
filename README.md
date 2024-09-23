@@ -44,6 +44,54 @@ Ensure you have the following installed on your machine:
 - [MySQL](https://www.mysql.com/downloads/)
 
 ### Installation
+# Backend (Spring Boot):
+
+Navigate to the backend folder and run:
+
+```bash
+cd book
+mvn spring-boot:run
+```
+
+Ensure your MySQL server is running, and update the `application.properties` file with your MySQL credentials.
+
+# Frontend (React.js):
+
+Navigate to the frontend folder and run:
+
+```bash
+cd bookweb
+npm install
+npm start
+```
+
+# Database Setup:
+
+Create a MySQL database for the application.  
+Update the Spring Boot `application.properties` file with your database details.
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/book
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+```
+
+# Run the Application:
+
+- The frontend will run on `http://localhost:3000`.
+- The backend Spring Boot application will run on `http://localhost:8080`.
+
+# API Endpoints
+
+- `GET /api/books` - Get all books
+- `POST /api/book` - Add a new book
+- `PATCH /api/book/{id}` - Update book information
+- `DELETE /api/book/{id}` - Delete a book
+
+# Screenshots
+
+(Add screenshots of your app’s UI for better understanding)
+
 
 1. **Clone the Repository:**
 
