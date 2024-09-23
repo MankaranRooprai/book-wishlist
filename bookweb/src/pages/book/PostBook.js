@@ -45,7 +45,7 @@ const PostBook = () => {
   return (
     <>
       <div className="center-form">
-        <h1>Post New Book</h1>
+        <h1>Add New Book</h1>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formBasicName">
             <Form.Control
@@ -88,7 +88,7 @@ const PostBook = () => {
           </Form.Group>
 
           <Button variant="primary" type="submit" className="w-100">
-            Post Book
+            Add Book
           </Button>
         </Form>
       </div>

@@ -17,7 +17,7 @@ const Header = () => {
               Books
             </Nav.Link>
             <Nav.Link as={Link} to="/book" className="nav-link">
-              Post Book
+              Add Book
             </Nav.Link>
           </Nav>
         </Container>
