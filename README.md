@@ -71,9 +71,14 @@ Create a MySQL database for the application.
 Update the Spring Boot `application.properties` file with your database details.
 
 ```properties
+spring.application.name=book
 spring.datasource.url=jdbc:mysql://localhost:3306/book
-spring.datasource.username=root
+spring.datasource.username=yourusername
 spring.datasource.password=yourpassword
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 ```
 
 # Run the Application:
