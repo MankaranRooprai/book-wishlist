@@ -4,9 +4,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [books, setBooks] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -39,6 +41,10 @@ const Dashboard = () => {
     }
   };
 
+  const handleUpdate = (bookId) => {
+    navigate(`/book/${bookId}`);
+  };
+
   return (
     <>
       <Container className="mt-5">
@@ -62,7 +68,12 @@ const Dashboard = () => {
                     <td>{book.yearPublished}</td>
                     <td>{book.fictionOrNonFiction}</td>
                     <td>
-                      <Button variant="outline-secondary">Update </Button>{" "}
+                      <Button
+                        variant="outline-secondary"
+                        onClick={() => handleUpdate(book.id)}
+                      >
+                        Update{" "}
+                      </Button>{" "}
                       <Button
                         variant="outline-danger"
                         onClick={() => handleDelete(book.id)}

@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -32,5 +33,20 @@ public class BookService {
 
     public Book getBookById(Long id) {
         return bookRepository.findById(id).orElse(null);
+    }
+
+    public Book updateBook(Long id, Book book) {
+        Optional<Book> optionalBook = bookRepository.findById(id);
+        if (optionalBook.isPresent()) {
+            Book existingBook = optionalBook.get();
+
+            existingBook.setAuthor(book.getAuthor());
+            existingBook.setTitle(book.getTitle());
+            existingBook.setYearPublished(book.getYearPublished());
+            existingBook.setFictionOrNonFiction(book.getFictionOrNonFiction());
+
+            return bookRepository.save(existingBook);
+        }
+        return null;
     }
 }
